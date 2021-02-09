@@ -14,7 +14,11 @@ while i < namber:
     l.append(t)
     i = i + 1
 print(l)
-#naliz = input('введите значение для анализа(название, цена, колличество, единица измерения): ')
-#for l_analiz in l:
-   # print()
-#s_analiz = {analiz: l_analiz}
+analyz = input('введите значение для анализа(название, цена, колличество, единица измерения): ')
+l_analyz = []
+for x in l:
+    l_analyz.append(x[1].get(analyz))
+s_analyz = {analyz: l_analyz}
+print(s_analyz)
+
+
