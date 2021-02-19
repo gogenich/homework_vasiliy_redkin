@@ -1,4 +1,4 @@
-from random import randrange, randint
+from random import randint
 """i - колличество эдевенсов в спписке"""
 i = 10
 """задаю случайный список с колличеством i"""
