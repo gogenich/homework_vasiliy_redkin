@@ -1,7 +1,10 @@
 from random import randrange, randint
-"""задаю случайный список"""
-list = [randint(1, 10) for el in range(10)]
-"""генерирую новый списов с условием что """
-new_list = [y for y in list if  < y]
-print(list)
-print(new_list)
+"""i - колличество эдевенсов в спписке"""
+i = 10
+"""задаю случайный список с колличеством i"""
+list = [randint(1, i) for el in range(i)]
+"""генерирую новый список значений с улновем что последущее больше предидущего"""
+new_list = [list[i] for i in range(1, i) if list[i] > list[i - 1]]
+"""вывод списков"""
+print(f'генерируемый список: {list}')
+print(f'список с условием, что последущее больше предидущего: {new_list}')
