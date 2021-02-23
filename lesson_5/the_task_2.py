@@ -2,17 +2,11 @@
  выполнить подсчет количества строк, количества слов в каждой строке."""
 
 from io import TextIOWrapper
-"""открыли фаил на чтение"""
-fail = open('the_task_2.txt', 'r', encoding = 'UTF-8')
-"""вывели список строк файла"""
-content = fail.readlines()
-"""закрыли фаил"""
-fail.close()
-line = 0
-"""с помощью цикла фор подсчитываем колличество строк а так же колличество символов 
-в строке и сразу принтуем"""
-for el in content:
-    line = line + 1
-    print(f'колличество элементов в {line} строке = {len(el)-2}')
-print(f'колличество строк  = {line}')
-fail.close()
+with open('the_task_2.txt', 'r', encoding = 'UTF-8') as fail:
+    content = fail.readlines()
+
+print(f'клличество строк = {len(content)}')
+world = [print(f'колличество слов в {el + 1} строке = {len(content[el].split(" "))}') for el in range(0, len(content))]
+
+
+
