@@ -1,0 +1,4 @@
+firm_1 ooo 10000 5000
+firm_2 ooo 9000 6000
+firm_3 ooo 1000 2000
+firm_4 ooo 8000 7000
