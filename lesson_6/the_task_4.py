@@ -10,6 +10,7 @@
 Создайте экземпляры классов, передайте значения атрибутов.
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат."""
+
 class Car:
 
     def __init__(self, speed, color, name, is_police = False):
@@ -35,9 +36,13 @@ class Car:
 
 class TownCar(Car):
 
+    """здесь в методе show_speed при привышении скорости не только выводиться сообщение
+но и выдвигаеться полицейская машина :)"""
     def show_speed(self):
         if self.speed > 60:
             print(f'тукущая скорость машины {self.name} = {self.speed} ВНИМАНИЕ вы привысили скорость')
+            police_car.go(self.speed)
+            print(f'машина {police_car.name} задержала нарушителя')
         else:
             print(f'тукущая скорость машины {self.name} = {self.speed}')
 
@@ -49,6 +54,8 @@ class WorkCar(Car):
     def show_speed(self):
         if self.speed > 40:
             print(f'тукущая скорость машины {self.name} = {self.speed} ВНИМАНИЕ вы привысили скорость')
+            police_car.go(self.speed)
+            print(f'машина {police_car.name} задержала нарушителя')
         else:
             print(f'тукущая скорость машины {self.name} = {self.speed}')
 
@@ -65,8 +72,9 @@ police_car = PoliceCar(120, 'ping', 'Polise', True)
 #boss_car.go(40)
 #boss_car.turn('направо')
 #boss_car.turn('налево')
-#tawn_car.go(61)
-#tawn_car.show_speed()
+"""при превышении скорости будет выдвигаться полиция"""
+tawn_car.go(61)
+tawn_car.show_speed()
 #tawn_car.stop()
 #tawn_car.go(50)
 #tawn_car.show_speed()
