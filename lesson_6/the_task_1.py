@@ -9,7 +9,7 @@ from time import sleep
 class TrafficLight:
 
     def __init__(self, color='red'):
-        self.color = color
+        self.__color = color
 
     def running(self):
         self.color = 'red'
